@@ -1,7 +1,10 @@
-language:generic
 sudo: required
 services:
   - docker
+
+branches:
+  only:
+    - master
 
 before_install:
   - docker build -f Dockerfile.dev -t unnicognizant/docker-react-sample .
